@@ -1,0 +1,9 @@
+E:\A.GALAL\MyProjects\Editor\Editor\bin\Debug\Editor.exe.config
+E:\A.GALAL\MyProjects\Editor\Editor\bin\Debug\Editor.exe
+E:\A.GALAL\MyProjects\Editor\Editor\bin\Debug\Editor.pdb
+E:\A.GALAL\MyProjects\Editor\Editor\obj\Debug\Editor.csprojResolveAssemblyReference.cache
+E:\A.GALAL\MyProjects\Editor\Editor\obj\Debug\Editor.Form1.resources
+E:\A.GALAL\MyProjects\Editor\Editor\obj\Debug\Editor.Properties.Resources.resources
+E:\A.GALAL\MyProjects\Editor\Editor\obj\Debug\Editor.csproj.GenerateResource.Cache
+E:\A.GALAL\MyProjects\Editor\Editor\obj\Debug\Editor.exe
+E:\A.GALAL\MyProjects\Editor\Editor\obj\Debug\Editor.pdb
