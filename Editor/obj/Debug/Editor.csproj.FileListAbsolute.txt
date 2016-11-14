@@ -7,3 +7,12 @@ E:\A.GALAL\MyProjects\Editor\Editor\obj\Debug\Editor.Properties.Resources.resour
 E:\A.GALAL\MyProjects\Editor\Editor\obj\Debug\Editor.csproj.GenerateResource.Cache
 E:\A.GALAL\MyProjects\Editor\Editor\obj\Debug\Editor.exe
 E:\A.GALAL\MyProjects\Editor\Editor\obj\Debug\Editor.pdb
+E:\SQLDBToJSON\trunk\Editor\bin\Debug\Editor.exe.config
+E:\SQLDBToJSON\trunk\Editor\obj\Debug\Editor.exe
+E:\SQLDBToJSON\trunk\Editor\obj\Debug\Editor.pdb
+E:\SQLDBToJSON\trunk\Editor\bin\Debug\Editor.exe
+E:\SQLDBToJSON\trunk\Editor\bin\Debug\Editor.pdb
+E:\SQLDBToJSON\trunk\Editor\obj\Debug\Editor.csprojResolveAssemblyReference.cache
+E:\SQLDBToJSON\trunk\Editor\obj\Debug\Editor.Form1.resources
+E:\SQLDBToJSON\trunk\Editor\obj\Debug\Editor.Properties.Resources.resources
+E:\SQLDBToJSON\trunk\Editor\obj\Debug\Editor.csproj.GenerateResource.Cache

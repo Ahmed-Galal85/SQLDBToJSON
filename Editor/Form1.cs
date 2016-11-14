@@ -56,7 +56,7 @@ namespace Editor
                 arr[3] = fileInfo.Extension;
                 arr[4] = fileInfo.FullName;
                 arr[5] = fileInfo.CreationTime.ToLongDateString();
-                _builder.AppendLine("{" + $"id : {_counter}, img: 'www/img/{fileInfo.Name}' , name : '{fileInfo.Name}' " + "} ,");
+                _builder.AppendLine("{" + $"id : {_counter}, url: 'www/img/{fileInfo.Name}' , name : '{fileInfo.Name}' " + "} ,");
                 var item = new ListViewItem(arr);
                 lstvwFiles.Items.Add(item);
 
@@ -98,7 +98,7 @@ namespace Editor
                     streamWriter.AutoFlush = true;
                     streamWriter.Flush();
                 }
-                MessageBox.Show("تم حفظ الملف بنجاح");
+                MessageBox.Show("File saved");
             }
             catch (Exception exception)
             {
@@ -218,7 +218,5 @@ namespace Editor
 
 
         }
-
-
     }
 }

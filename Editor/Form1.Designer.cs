@@ -31,21 +31,21 @@
             this.btnSaveAs = new System.Windows.Forms.Button();
             this.tbPage = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.lstvwFiles = new System.Windows.Forms.ListView();
             this.btnBrows = new System.Windows.Forms.Button();
             this.txtPath = new System.Windows.Forms.TextBox();
-            this.lstbxTables = new System.Windows.Forms.ListBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnLdTables = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtDataBaseName = new System.Windows.Forms.TextBox();
-            this.txtUserName = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.btnLdTables = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtServer = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.lstbxTables = new System.Windows.Forms.ListBox();
             this.tbPage.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -86,21 +86,8 @@
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(664, 369);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "ملفات";
+            this.tabPage1.Text = "Files";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.btnLdTables);
-            this.tabPage2.Controls.Add(this.tableLayoutPanel1);
-            this.tabPage2.Controls.Add(this.lstbxTables);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(664, 369);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "قاعدة البيانات";
-            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // lstvwFiles
             // 
@@ -121,6 +108,7 @@
             this.btnBrows.TabIndex = 4;
             this.btnBrows.Text = "Brows";
             this.btnBrows.UseVisualStyleBackColor = true;
+            this.btnBrows.Click += new System.EventHandler(this.btnBrows_Click);
             // 
             // txtPath
             // 
@@ -130,14 +118,29 @@
             this.txtPath.Size = new System.Drawing.Size(658, 20);
             this.txtPath.TabIndex = 3;
             // 
-            // lstbxTables
+            // tabPage2
             // 
-            this.lstbxTables.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lstbxTables.FormattingEnabled = true;
-            this.lstbxTables.Location = new System.Drawing.Point(3, 3);
-            this.lstbxTables.Name = "lstbxTables";
-            this.lstbxTables.Size = new System.Drawing.Size(658, 225);
-            this.lstbxTables.TabIndex = 0;
+            this.tabPage2.Controls.Add(this.btnLdTables);
+            this.tabPage2.Controls.Add(this.tableLayoutPanel1);
+            this.tabPage2.Controls.Add(this.lstbxTables);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(664, 369);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "DataBase";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnLdTables
+            // 
+            this.btnLdTables.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnLdTables.Location = new System.Drawing.Point(3, 343);
+            this.btnLdTables.Name = "btnLdTables";
+            this.btnLdTables.Size = new System.Drawing.Size(658, 23);
+            this.btnLdTables.TabIndex = 2;
+            this.btnLdTables.Text = "Load Tables";
+            this.btnLdTables.UseVisualStyleBackColor = true;
+            this.btnLdTables.Click += new System.EventHandler(this.btnLdTables_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -163,35 +166,13 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(658, 116);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // label1
+            // label4
             // 
-            this.label1.Location = new System.Drawing.Point(548, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 23);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "قاعدة البيانات";
-            // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(548, 58);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 21);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "المستخدم";
-            // 
-            // txtDataBaseName
-            // 
-            this.txtDataBaseName.Location = new System.Drawing.Point(3, 32);
-            this.txtDataBaseName.Name = "txtDataBaseName";
-            this.txtDataBaseName.Size = new System.Drawing.Size(538, 20);
-            this.txtDataBaseName.TabIndex = 5;
-            // 
-            // txtUserName
-            // 
-            this.txtUserName.Location = new System.Drawing.Point(3, 61);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(538, 20);
-            this.txtUserName.TabIndex = 6;
+            this.label4.Location = new System.Drawing.Point(548, 87);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(107, 23);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Password";
             // 
             // txtPassword
             // 
@@ -200,24 +181,28 @@
             this.txtPassword.Size = new System.Drawing.Size(538, 20);
             this.txtPassword.TabIndex = 7;
             // 
-            // btnLdTables
+            // label1
             // 
-            this.btnLdTables.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnLdTables.Location = new System.Drawing.Point(3, 343);
-            this.btnLdTables.Name = "btnLdTables";
-            this.btnLdTables.Size = new System.Drawing.Size(658, 23);
-            this.btnLdTables.TabIndex = 2;
-            this.btnLdTables.Text = "Load Tables";
-            this.btnLdTables.UseVisualStyleBackColor = true;
-            this.btnLdTables.Click += new System.EventHandler(this.btnLdTables_Click);
+            this.label1.Location = new System.Drawing.Point(548, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(107, 23);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Database name";
             // 
-            // label4
+            // label2
             // 
-            this.label4.Location = new System.Drawing.Point(548, 87);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 23);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "كلمة المرور";
+            this.label2.Location = new System.Drawing.Point(548, 58);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(107, 21);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "User name";
+            // 
+            // txtDataBaseName
+            // 
+            this.txtDataBaseName.Location = new System.Drawing.Point(3, 32);
+            this.txtDataBaseName.Name = "txtDataBaseName";
+            this.txtDataBaseName.Size = new System.Drawing.Size(538, 20);
+            this.txtDataBaseName.TabIndex = 5;
             // 
             // label3
             // 
@@ -225,7 +210,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(100, 23);
             this.label3.TabIndex = 11;
-            this.label3.Text = "سيرفر ";
+            this.label3.Text = "Server name";
             // 
             // txtServer
             // 
@@ -233,6 +218,22 @@
             this.txtServer.Name = "txtServer";
             this.txtServer.Size = new System.Drawing.Size(537, 20);
             this.txtServer.TabIndex = 12;
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.Location = new System.Drawing.Point(3, 61);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(538, 20);
+            this.txtUserName.TabIndex = 6;
+            // 
+            // lstbxTables
+            // 
+            this.lstbxTables.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lstbxTables.FormattingEnabled = true;
+            this.lstbxTables.Location = new System.Drawing.Point(3, 3);
+            this.lstbxTables.Name = "lstbxTables";
+            this.lstbxTables.Size = new System.Drawing.Size(658, 225);
+            this.lstbxTables.TabIndex = 0;
             // 
             // Form1
             // 
