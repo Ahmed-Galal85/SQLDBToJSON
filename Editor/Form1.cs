@@ -132,7 +132,7 @@ namespace Editor
                         if (dataTable.Rows.Count > 0)
                         {
                             _builder.Clear();
-                           
+
                             lstbxTables.Items.Clear();
                             int x = 0;
                             _builder.Append("{");
@@ -141,25 +141,28 @@ namespace Editor
                                 lstbxTables.Items.Add(dr["Table_Name"]);
                                 CreateJson(dr["Table_Name"].ToString());
                             }
-                            _builder.Remove(_builder.Length-1, 1);
+                            _builder.Remove(_builder.Length - 1, 1);
                             _builder.Append("}");
                         }
 
                     }
-
+                    MessageBox.Show("Done");
                 }
             }
             catch (Exception exception)
             {
                 MessageBox.Show(exception.Message);
             }
-            Cursor.Current = Cursors.Default;
-            MessageBox.Show("Done");
+            finally
+            {
+                Cursor.Current = Cursors.Default;
+            }
+           
         }
 
         public void CreateJson(string tbName)
         {
-            if (txtDataBaseName.Text == "" || txtUserName.Text == "" || txtServer.Text == "")
+            if (txtDataBaseName.Text == "" || txtUserName.Text == "" || txtServer.Text == "" || txtPassword.Text == "")
                 return;
 
             string conn = $"Password={txtPassword.Text};Persist Security Info=True;User ID={txtUserName.Text};Initial Catalog={txtDataBaseName.Text};Data Source={txtServer.Text}";
