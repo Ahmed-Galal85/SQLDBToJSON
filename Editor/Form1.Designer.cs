@@ -91,10 +91,10 @@
             // 
             // lstvwFiles
             // 
-            this.lstvwFiles.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lstvwFiles.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstvwFiles.Location = new System.Drawing.Point(3, 46);
             this.lstvwFiles.Name = "lstvwFiles";
-            this.lstvwFiles.Size = new System.Drawing.Size(658, 301);
+            this.lstvwFiles.Size = new System.Drawing.Size(658, 320);
             this.lstvwFiles.TabIndex = 5;
             this.lstvwFiles.UseCompatibleStateImageBehavior = false;
             this.lstvwFiles.View = System.Windows.Forms.View.Details;
