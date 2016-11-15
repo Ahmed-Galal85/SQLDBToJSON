@@ -202,9 +202,11 @@ namespace Editor
                         else
                         {
                             _builder.Append("[{");
+                            int countColumns = 0;
                             foreach (DataColumn clmn in dataTable.Columns)
                             {
-                                string line = '"' + clmn.ColumnName + '"' + ":" + '"' + '"';
+                                countColumns++;
+                                string line = '"' + clmn.ColumnName + '"' + ":" + '"' + '"' + (dataTable.Columns.Count != countColumns ? "," : "");
                                 _builder.AppendLine(line);
                             }
                             _builder.Append("}],");
