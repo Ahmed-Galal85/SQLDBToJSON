@@ -201,7 +201,7 @@ namespace Editor
                         }
                         else
                         {
-                            _builder.Append("[{");
+                            _builder.Append(":[{");
                             int countColumns = 0;
                             foreach (DataColumn clmn in dataTable.Columns)
                             {
