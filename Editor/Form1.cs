@@ -176,7 +176,7 @@ namespace Editor
                     using (var dataTable = new DataTable())
                     {
                         adapter.Fill(dataTable);
-                        _builder.Append('"' + tbName + '"');
+                        _builder.AppendLine('"' + tbName + '"');
                         if (dataTable.Rows.Count > 0)
                         {
                             _builder.Append(":[");
@@ -194,7 +194,7 @@ namespace Editor
 
                                     string line = '"' + clmn.ColumnName + '"' + ":" + (isnumber ? (row[clmn.ColumnName] == null ? "0" : row[clmn.ColumnName].ToString()) : (row[clmn.ColumnName] == null ? "null" : '"'
                                         + row[clmn.ColumnName].ToString() + '"')) + (dataTable.Columns.Count != countColumns ? "," : "");
-                                    _builder.AppendLine(line);
+                                    _builder.Append(line);
                                 }
 
                                 _builder.Append(dataTable.Rows.Count != countRows ? "}," : "}");
@@ -213,7 +213,7 @@ namespace Editor
                                     clmn.DataType.Name.ToLower().Contains("double") || clmn.DataType.Name.ToLower().Contains("decimal");
 
                                 string line = '"' + clmn.ColumnName + '"' + ":" + (isnumber ? "0" : ('"' + "" + '"')) + (dataTable.Columns.Count != countColumns ? "," : "");
-                                _builder.AppendLine(line);
+                                _builder.Append(line);
                             }
                             _builder.Append("}],");
                         }
