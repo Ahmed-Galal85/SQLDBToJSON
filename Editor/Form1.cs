@@ -157,7 +157,7 @@ namespace Editor
             {
                 Cursor.Current = Cursors.Default;
             }
-           
+
         }
 
         public void CreateJson(string tbName)
@@ -189,8 +189,11 @@ namespace Editor
                                 foreach (DataColumn clmn in dataTable.Columns)
                                 {
                                     countColumns++;
-                                    string line = '"' + clmn.ColumnName + '"' + ":" + (row[clmn.ColumnName] == null ? "null" : '"'
-                                        + row[clmn.ColumnName].ToString() + '"') + (dataTable.Columns.Count != countColumns ? "," : "");
+                                    var isnumber = clmn.DataType.Name.ToLower().Contains("int") || clmn.DataType.Name.ToLower().Contains("float") ||
+                                    clmn.DataType.Name.ToLower().Contains("double") || clmn.DataType.Name.ToLower().Contains("decimal");
+
+                                    string line = '"' + clmn.ColumnName + '"' + ":" + (isnumber ? (row[clmn.ColumnName] == null ? "0" : row[clmn.ColumnName].ToString()) : (row[clmn.ColumnName] == null ? "null" : '"'
+                                        + row[clmn.ColumnName].ToString() + '"')) + (dataTable.Columns.Count != countColumns ? "," : "");
                                     _builder.AppendLine(line);
                                 }
 
@@ -206,7 +209,10 @@ namespace Editor
                             foreach (DataColumn clmn in dataTable.Columns)
                             {
                                 countColumns++;
-                                string line = '"' + clmn.ColumnName + '"' + ":" + '"' + '"' + (dataTable.Columns.Count != countColumns ? "," : "");
+                                bool isnumber = clmn.DataType.Name.ToLower().Contains("int") || clmn.DataType.Name.ToLower().Contains("float") ||
+                                    clmn.DataType.Name.ToLower().Contains("double") || clmn.DataType.Name.ToLower().Contains("decimal");
+
+                                string line = '"' + clmn.ColumnName + '"' + ":" + (isnumber ? "0" : ('"' + "" + '"')) + (dataTable.Columns.Count != countColumns ? "," : "");
                                 _builder.AppendLine(line);
                             }
                             _builder.Append("}],");
